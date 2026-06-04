@@ -43,14 +43,7 @@
       --glow:    rgba(124,106,247,0.18);
     }
 
-  *{
-            outline: none;
-            width: 100%;
-             /* max-width: 100%; */
-             margin: 0;
-             padding: 0;
-             /* overflow-x: hidden; */
-  }
+
     /* ─── RESET ─── */
     *, *::before, *::after {
        box-sizing: border-box; 
