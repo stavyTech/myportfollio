@@ -42,10 +42,12 @@
       --text3:   #9095b0;
       --glow:    rgba(124,106,247,0.18);
     }
-/* *{
+*{
   overflow: hidden;
+    scroll-behavior: smooth; 
+      font-size: 16px;
  
-} */
+}
 
     /* ─── RESET ─── */
     *, *::before, *::after {
