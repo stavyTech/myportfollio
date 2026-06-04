@@ -44,7 +44,12 @@
     }
 
   *{
-            outline: 1px solid red;
+            outline: none;
+            width: 100%;
+             max-width: 100%;
+             margin: 0;
+             padding: 0;
+             overflow-x: hidden;
   }
     /* ─── RESET ─── */
     *, *::before, *::after {
@@ -1577,7 +1582,7 @@
         margin-left: auto; 
         margin-right: auto;
        }
-      /* .float-card1 { 
+      .float-card1 { 
         top: 0; 
         right: -20px; 
       }
@@ -1587,7 +1592,7 @@
        }
       .float-card3 { 
         display: none;
-       } */
+       } 
       .about-grid { 
         grid-template-columns: 1fr; 
       }
