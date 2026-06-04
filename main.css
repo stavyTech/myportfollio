@@ -906,11 +906,11 @@
       .footer-top { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
     }
-    @media (max-width: 480px) {
+    /* @media (max-width: 480px) {
       .hero-h1 { font-size: 2rem; }
       .hero-avatar-wrap { width: 220px; height: 220px; }
       .why-cta { padding: 32px 20px; }
-    }
+    } */
 
     
   /* about */
