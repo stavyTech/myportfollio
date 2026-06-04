@@ -43,12 +43,15 @@
       --glow:    rgba(124,106,247,0.18);
     }
 
-  
+  *{
+            outline: 1px solid red;
+  }
     /* ─── RESET ─── */
     *, *::before, *::after {
        box-sizing: border-box; 
        margin: 0;
         padding: 0;
+
      }
     html { 
       scroll-behavior: smooth; 
@@ -105,7 +108,8 @@
         pointer-events: none; 
       } }
     #loader.hide {
-       opacity: 0; visibility: hidden; 
+       opacity: 0; 
+       visibility: hidden; 
        pointer-events: none;
        }
     .loader-logo {
@@ -146,7 +150,8 @@
 
     /* ─── NAV ─── */
     nav {
-      position: fixed; top: 0; 
+      position: fixed; 
+      top: 0; 
       left: 0; right: 0; 
       z-index: 100;
       padding: 0 5vw;
@@ -196,7 +201,8 @@
       transition: width 0.3s;
     }
     .nav-links a:hover { 
-      color: var(--text); }
+      color: var(--text); 
+    }
     .nav-links a:hover::after {
        width: 100%; 
       }
@@ -304,7 +310,8 @@
         radial-gradient(ellipse 50% 40% at 90% 10%, rgba(176,106,247,0.08) 0%, transparent 60%);
     }
     .hero-grid {
-      position: absolute; inset: 0;
+      position: absolute; 
+      inset: 0;
       background-image:
         linear-gradient(var(--border) 1px, transparent 1px),
         linear-gradient(90deg, var(--border) 1px, transparent 1px);
@@ -411,7 +418,8 @@
       gap: 14px;
        flex-wrap: wrap;
       margin-bottom: 2.8rem;
-      opacity: 0; animation: fadeUp 0.7s 1s forwards;
+      opacity: 0;
+       animation: fadeUp 0.7s 1s forwards;
     }
     .btn-primary {
       padding: 13px 30px;
@@ -689,7 +697,8 @@
       opacity: 0;
     }
     .about-img {
-      width: 100%; aspect-ratio: 4/5;
+      width: 100%; 
+      aspect-ratio: 4/5;
       border-radius: var(--r2);
       background: cover;
       background: linear-gradient(135deg, var(--bg3) 0%, var(--bg) 100%);
@@ -1625,7 +1634,7 @@
         }
     } 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
   .hero-inner {
     flex-direction: column;
     text-align: center;
@@ -1637,16 +1646,16 @@
 }
   /* about */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .about-img {
     aspect-ratio: 1/1; /* makes it square on mobile so nothing gets cut */
-  }
+  /* }
 
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-}
+}   */
 
 
     /* ─── COUNTER ─── */
