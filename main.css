@@ -42,16 +42,16 @@
       --text3:   #9095b0;
       --glow:    rgba(124,106,247,0.18);
     }
-/* *{
+*{
   overflow: hidden;
  
-} */
+}
 
     /* ─── RESET ─── */
     *, *::before, *::after {
        box-sizing: border-box; 
-       margin: 0;
-        padding: 0;
+       /* margin: 0;
+        padding: 0; */
 
      }
     html { 
