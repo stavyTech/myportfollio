@@ -912,49 +912,8 @@
       .why-cta { padding: 32px 20px; }
     }
 
-    /* FIX 1 */
-@media (max-width: 768px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .hero-visual {
-    /* order: -1; */
-    display: flex;
-    justify-content: center;
-  }
-}
-
-/* FIX 2 */
- @media (max-width: 768px) {
-   .floating-card {
-    /* position: relative; */
-   
-    left: 10000;
-    right: 10000;
-   
-   transform: none;
-    /* margin: 10px auto; */
-    width: fit-content;
-  }  
-
-  .hero-avatar-wrap {
-    width: 240px;
-    height: 240px;
-    height: 240px;
-  }
- }
-
-/* FIX 3 */
-@media (max-width: 768px) {
-  .hero-avatar-wrap {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-  }
-}
-    /* about */
+    
+  /* about */
 
 @media (max-width: 768px) {
   .about-img {
