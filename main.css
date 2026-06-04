@@ -1562,9 +1562,11 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 1024px) {
-      .hero-inner { grid-template-columns: 1fr; text-align: center;
+      .hero-inner { grid-template-columns: 1fr; 
+        text-align: center;
        }
-      .hero-avatar-wrap { width: 280px; height: 280px;
+      .hero-avatar-wrap { width: 280px;
+         height: 280px;
        }
       .hero-visual { order: -1; 
       }
@@ -1575,7 +1577,7 @@
         margin-left: auto; 
         margin-right: auto;
        }
-      .float-card1 { 
+      /* .float-card1 { 
         top: 0; 
         right: -20px; 
       }
@@ -1585,7 +1587,7 @@
        }
       .float-card3 { 
         display: none;
-       }
+       } */
       .about-grid { 
         grid-template-columns: 1fr; 
       }
@@ -1622,7 +1624,7 @@
            text-align: center;
            }
     }
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       .hero-h1 { font-size: 2rem;
        }
       .hero-avatar-wrap { 
@@ -1634,7 +1636,7 @@
         }
     } 
 
-    /* @media (max-width: 768px) {
+    @media (max-width: 768px) {
   .hero-inner {
     flex-direction: column;
     text-align: center;
@@ -1646,16 +1648,16 @@
 }
   /* about */
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .about-img {
     aspect-ratio: 1/1; /* makes it square on mobile so nothing gets cut */
-  /* }
+  }
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
-}   */
+} 
 
 
     /* ─── COUNTER ─── */
