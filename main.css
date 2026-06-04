@@ -42,9 +42,10 @@
       --text3:   #9095b0;
       --glow:    rgba(124,106,247,0.18);
     }
-*{
-  overflow-x: hidden;
-}
+/* *{
+  overflow: hidden;
+ 
+} */
 
     /* ─── RESET ─── */
     *, *::before, *::after {
@@ -64,13 +65,13 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
-      overflow-x: hidden;
+  
       transition: background 0.4s, color 0.4s;
        width: 100%;
   max-width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden
+ 
     }
     a {
        color: inherit; 
