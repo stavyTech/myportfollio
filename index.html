@@ -8,6 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="all" />
   <link rel="stylesheet" href="main.css">
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "vgZYuF3Jig065QDAq",
+      });
+   })();
+</script>
 </head>
 <body>
 
@@ -991,64 +1001,64 @@ StavyTech made our business registration process incredibly smooth and efficient
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:40px;backdrop-filter:blur(12px);">
           <h3 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;margin-bottom:8px;">Send a Message</h3>
           <p style="font-size:0.85rem;color:var(--text2);margin-bottom:28px;">I'll respond within 24 hours. Promise. ✨</p>
-          <div class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Your Name *</label>
-                <input type="text" class="form-input" placeholder="Jane Doe" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Email Address *</label>
-                <input type="email" class="form-input" placeholder="jane@company.com" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Project Type</label>
-              <select class="form-select">
-                <option value="">Select project type...</option>
-                <option>Website Development</option>
-                <option>Landing Page</option>
-                <option>Business Website</option>
-                <option>E-commerce</option>
-                <option>Dashboard / Web App</option>
-                <option>Website Redesign</option>
-                <option>UI/UX Design</option>
-                <option>Other</option>
-              </select>
-            </div>
-  <div class="form-group">
-              <label class="form-label">Project Type</label>
-              <select class="form-select">
-                <option value="">Select Bussiness Registration type...</option>
-                <option>Business Registration</option>
-                <option>Company Registration</option>
-                <option>NGO Registration</option>
-                <option>Annual Returns</option>
-                <option>Change of Business / Company Name or Ownership</option>
-                <option>NIN Processing</option>
-                <option>International passport processing</option>
-                <option>Other</option>
-              </select>
-            </div>
+       <form class="contact-form" id="contactForm">
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label">Your Name *</label>
+      <input type="text" class="form-input" placeholder="Jane Doe" required name="name"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email Address *</label>
+      <input type="email" class="form-input" placeholder="jane@company.com" required name="email"/>
+    </div>
+  </div>
 
-            <div class="form-group">
-              <label class="form-label">Project Budget for website development</label>
-              <select class="form-select">
-                <option value="">Select budget range...</option>
-                <option>$500 – $1,000</option>
-                <option>$1,000 – $3,000</option>
-                <option>$3,000 – $5,000</option>
-                <option>$5,000 – $10,000</option>
-                <option>$10,000+</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Tell Me About Your Project *</label>
-              <textarea class="form-textarea" placeholder="Describe your project, goals, timeline, and any specific requirements..." required></textarea>
-            </div>
-            <button class="form-submit" onclick="handleSubmit(event)">
-              <span id="submitText">Send Message 🚀</span>
-            </button>
+  <div class="form-group">
+    <label class="form-label">Project Type</label>
+    <select class="form-select" name="projectType">
+      <option value="">Select project type...</option>
+      <option>Website Development</option>
+      <option>Landing Page</option>
+      <option>Business Website</option>
+      <option>E-commerce</option>
+      <option>Dashboard / Web App</option>
+      <option>Website Redesign</option>
+      <option>UI/UX Design</option>
+      <option value="">Select Business Registration type...</option>
+      <option>Business Registration</option>
+      <option>Company Registration</option>
+      <option>NGO Registration</option>
+      <option>Annual Returns</option>
+      <option>Change of Business / Company Name or Ownership</option>
+      <option>NIN Processing</option>
+      <option>International passport processing</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Project Budget for website development</label>
+    <select class="form-select" name="projectBudget">
+      <option value="">Select budget range...</option>
+      <option>$500 – $1,000</option>
+      <option>$1,000 – $3,000</option>
+      <option>$3,000 – $5,000</option>
+      <option>$5,000 – $10,000</option>
+      <option>$10,000+</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Tell Me About Your Project *</label>
+    <textarea class="form-textarea" placeholder="Describe your project, goals, timeline, and any specific requirements..." required name="projectDetails"></textarea>
+  </div>
+
+  <button type="submit" class="form-submit">
+    <span id="submitText">Send Message 🚀</span>
+  </button>
+</form>
+
+           
             <p class="form-note">🔒 Your information is safe. No spam, ever.</p>
           </div>
         </div>
@@ -1056,6 +1066,34 @@ StavyTech made our business registration process incredibly smooth and efficient
     </div>
   </div>
 </section>
+<script>
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const submitText = document.getElementById('submitText');
+  submitText.textContent = 'Sending...';
+
+  // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key string
+  emailjs.sendForm('service_2uvk2xl', 'template_2060kkp', '#contactForm')
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      window.alert('Message sent successfully! I will get back to you within 24 hours. Thank you for reaching out!');
+      
+      // Reset the form and the button text
+      document.getElementById('contactForm').reset();
+      submitText.textContent = 'Send Message 🚀';
+    }, (error) => {
+      console.log('FAILED...', error);
+      window.alert('Oops! Something went wrong while sending your message. Please try again later or contact me directly at hello@ariasoleil.dev. Thank you for your understanding!');
+      
+      // Reset button text so they can try again
+      submitText.textContent = 'Send Message 🚀';
+    });
+});
+
+
+ </script>
 
 <!-- ═══ FOOTER ═══ -->
 <footer>

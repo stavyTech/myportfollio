@@ -42,12 +42,12 @@
       --text3:   #9095b0;
       --glow:    rgba(124,106,247,0.18);
     }
-*{
+/* *{
   overflow-x: hidden;
     scroll-behavior: smooth; 
       font-size: 16px;
  
-}
+} */
 
     /* ─── RESET ─── */
     *, *::before, *::after {
@@ -538,7 +538,7 @@
       display: flex; 
       align-items: flex-end; 
       justify-content: center;
-    }
+    } 
     /* SVG woman silhouette */
     .hero-avatar-fig {
       position: absolute;
@@ -1639,7 +1639,7 @@
         }
     } 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
   .hero-inner {
     flex-direction: column;
     text-align: center;
@@ -1648,7 +1648,7 @@
   .hero-visual {
     margin-top: 30px;
   }
-}
+} */
   /* about */
 
 @media (max-width: 768px) {
@@ -1775,6 +1775,7 @@
       opacity: 0;
        transition: opacity 0.3s;
     }
-    .glow-border:hover::before { opacity: 0.6; 
+    .glow-border:hover::before {
+       opacity: 0.6; 
     }
   
