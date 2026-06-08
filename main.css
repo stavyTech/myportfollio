@@ -1366,7 +1366,7 @@
     }
     @media (max-width: 768px) {
       .contact-link-item {
-        padding: 2px;
+        padding: 5px;
       }
     }
     .contact-link-item:hover { 
